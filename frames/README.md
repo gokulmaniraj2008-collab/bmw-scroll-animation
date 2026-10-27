@@ -1,5 +1,3 @@
-# Scroll animation frames
+# Original vector animation frames
 
-Add 120 matching, consistently cropped WebP frames named frame-001.webp through frame-120.webp in this directory. They should show successive moments of the same car animation, not 120 duplicates. The website uses sequence.js to load frame 1 first and then load the rest in small batches. Scroll progress selects the corresponding frame; unloaded frames use the nearest available frame. Canvas scales each image to fit the sticky viewport. If frame-001.webp is absent or reduced motion is requested, the existing single BMW image animation is retained.
-
-This repository does not yet contain the 120 frame assets. The current single external BMW image cannot by itself provide 120 distinct viewpoints. Check usage rights before adding any third-party image sequence. Static hosting serves these files at ./frames/frame-001.webp etc. No build command required.
+16 original SVG frames (frame-001.svg through frame-016.svg) depict a stylized APEX automotive road animation. These are original vector illustrations, not BMW photographs or 3D turntable frames. sequence.js progressively loads them into Canvas as the user scrolls. If the first asset cannot load or reduced motion is enabled, the original BMW image animation remains as fallback. No build step is required. To substitute genuine photographic car footage later, export consistently framed images and adjust FRAME_COUNT and framePath in sequence.js.
